@@ -9,6 +9,9 @@ export default function Input({name, label}: InputProps) {
     return (
         <S.Wrapper>
             <S.Label htmlFor={name}>{label}</S.Label>
+            <S.InputWrapper>
+                
+            </S.InputWrapper>
         </S.Wrapper>
     )
 }
