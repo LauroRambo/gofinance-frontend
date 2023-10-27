@@ -24,7 +24,7 @@ export const Label = styled.label`
 export const InputWrapper = styled.div`   
         displ ay: flex;
         flex-direction: row;
-        width: fit-content;
+        width: 200px;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -32,6 +32,13 @@ export const InputWrapper = styled.div`
 
 export const Input = styled.input<InputProps>`
     ${({ theme }) => css`
-        
+        padding: 20px 120px 20px 10px;
+        border: 1px solid ${theme.colors.lightGray};
+        background: ${theme.colors.white};
+        box-sizing: border-box;
+        border-radius: 7px;
+        height: fit-content;
+
+        margin: 5px 0;
     `}
 `
