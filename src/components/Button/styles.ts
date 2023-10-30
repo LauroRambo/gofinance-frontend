@@ -6,12 +6,12 @@ export const ButtonWrapper = styled.button.attrs({
 })<ButtonProps>`
     ${({ theme, disabled }) => css`
         background-color: ${theme.colors.tomato};
+        color: ${theme.colors.white};
         font-family: ${theme.font.family};
-        font-style: normal;
         font-weight: bold;
         font-size: 16px;
         line-height: 16px;
-        padding: 15px 120px;
+        padding: 15px 110px;
 
         border-radius: 5px;
         cursor: pointer;
@@ -32,7 +32,7 @@ export const ButtonWrapper = styled.button.attrs({
             opacity: 0.7;
         `}
 
-        color: ${theme.colors.white};
+        
     `}
 `
 
