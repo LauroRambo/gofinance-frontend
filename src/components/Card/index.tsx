@@ -1,18 +1,20 @@
 import * as S from './styles'
 
+
 export type CardProps = {
     title?: string
-    count?: string 
-} 
+    count?: string
+}
 
-export default function Card({title, count}: CardProps) {
+export default function Card({ title, count }: CardProps) {
     return (
         <S.Wrapper>
             <S.Header>
-                {title}
+                <S.Title>{title}</S.Title>
             </S.Header>
             <S.Content>
-                {count}
+                <S.IconDolar size={40}/>
+                <S.Count>{count}</S.Count>
             </S.Content>
         </S.Wrapper>
     )
