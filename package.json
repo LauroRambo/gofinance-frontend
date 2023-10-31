@@ -28,6 +28,9 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.16",
     "@popmotion/popcorn": "^0.4.4",
     "@styled-icons/material-outlined": "^10.18.0",
     "@styled-icons/remix-fill": "^10.18.0",
@@ -42,7 +45,8 @@
     "react-slick": "^0.28.1",
     "styled-components": "5.3.0",
     "styled-icons": "^10.22.0",
-    "styled-media-query": "^2.1.2"
+    "styled-media-query": "^2.1.2",
+    "victory": "^36.6.11"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
