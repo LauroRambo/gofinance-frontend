@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { InputProps } from '.'
 
 export const Wrapper = styled.main.attrs({
     id: 'WrapperInput'
@@ -30,7 +29,7 @@ export const InputWrapper = styled.div`
         align-items: center;
 `
 
-export const Input = styled.input<InputProps>`
+export const Input = styled.input`
     ${({ theme }) => css`
         padding: 20px 120px 20px 10px;
         border: 1px solid ${theme.colors.lightGray};
