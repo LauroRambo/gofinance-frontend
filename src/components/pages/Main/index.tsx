@@ -13,8 +13,8 @@ const Main = () => (
             duration: 2000
           }}
           data={[
-            { x: "Quantidade a Pagar", y: 20 },
-            { x: "Quantidade a Receber", y: 80 },
+            { x: "A Pagar", y: 20 },
+            { x: "A Receber", y: 80 },
           ]}
           innerRadius={100}
           colorScale={["tomato", "orange"]}
