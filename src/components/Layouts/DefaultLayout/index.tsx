@@ -22,10 +22,13 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
                     <S.Link onClick={() => router.replace('/auth')}><RiMoneyDollarCircleLine size={30}/></S.Link>
                     <S.Link onClick={() => router.replace('/auth')}><GrMoney size={30}/></S.Link>
                     <S.Link onClick={() => router.replace('/auth')}><MdAttachMoney size={30}/></S.Link>
-                    <S.Link onClick={() => router.replace('/auth')}><MdMoneyOff size={30}/></S.Link>
+                    <S.Link onClick={() => router.replace('/accounts-debit')}><MdMoneyOff size={30}/></S.Link>
                 </S.Links>
             </S.Header>
-            {children}
+            <S.Body>
+                {children}
+            </S.Body>
+            
         </S.Container>
             
     )
