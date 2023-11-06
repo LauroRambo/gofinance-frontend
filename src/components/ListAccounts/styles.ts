@@ -1,43 +1,33 @@
 import styled, { css } from 'styled-components'
+import { AiOutlineDelete } from 'react-icons/ai'
 
-export const Wrapper = styled.main.attrs({
-    id: 'WrapperInput'
-})`
+
+export const Wrapper = styled.main`
+    display: flex;
+    flex-direction: column;
+
 `
 
-export const Label = styled.label`
-    ${({ theme }) => css`
-        font-family: ${theme.font.family};
-        font-style: normal;
-        font-weight: ${theme.font.bold};
-        font-size: 16px;
-        line-height: 25px;
+export const Filters = styled.div`
+    display: flex;
+    flex-direction: row;
+    
+`
+export const Button = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+`
 
-        display: flex;
-        align-items: center;
+export const Filter = styled.div`
+    margin-left: 5px;
+    
+`
 
-        color: ${theme.colors.black};
+export const IconDelete = styled(AiOutlineDelete)`
+    ${ ({ theme }) => css`
+        color: ${theme.colors.tomato};    
     `}
-`
-
-export const InputWrapper = styled.div`   
-        displ ay: flex;
-        flex-direction: row;
-        width: 200px;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-`
-
-export const Input = styled.input`
-    ${({ theme }) => css`
-        padding: 20px 120px 20px 10px;
-        border: 1px solid ${theme.colors.lightGray};
-        background: ${theme.colors.white};
-        box-sizing: border-box;
-        border-radius: 7px;
-        height: fit-content;
-
-        margin: 5px 0;
-    `}
+    cursor: pointer;
 `
