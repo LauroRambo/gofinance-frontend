@@ -19,9 +19,9 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
                     <S.Logo src='/img/logo-finance.svg' />
                 </S.Link>
                 <S.Links>
-                    <S.Link onClick={() => router.replace('/auth')}><RiMoneyDollarCircleLine size={30}/></S.Link>
-                    <S.Link onClick={() => router.replace('/auth')}><GrMoney size={30}/></S.Link>
-                    <S.Link onClick={() => router.replace('/auth')}><MdAttachMoney size={30}/></S.Link>
+                    <S.Link onClick={() => router.replace('/categories-receveiment')}><RiMoneyDollarCircleLine size={30}/></S.Link>
+                    <S.Link onClick={() => router.replace('/categories-debit')}><GrMoney size={30}/></S.Link>
+                    <S.Link onClick={() => router.replace('/accounts-receivements')}><MdAttachMoney size={30}/></S.Link>
                     <S.Link onClick={() => router.replace('/accounts-debit')}><MdMoneyOff size={30}/></S.Link>
                 </S.Links>
             </S.Header>
