@@ -9,6 +9,7 @@ import React from 'react'
 import * as S from './styles'
 import Input from '../Input'
 import Button from '../Button'
+import { Bold } from 'styled-icons/boxicons-regular'
 
 
 
@@ -36,51 +37,54 @@ export default function ListAccounts() {
                     Adicionar
                 </Button>
             </S.Button>
-            <S.Filters>
-                <Input label="Data Inicial" type="date" name="initialDate" isFilter/>
-                <S.Filter>
-                    <Input label="Data Final" type="date" name="finalDate" isFilter />
-                </S.Filter>
-                <S.Filter>
-                    <Input label="Título" type="text" placeholder='Título' name="title" isFilter/>
-                </S.Filter>
-                <S.Filter>
-                    <Input label="Descrição" type="text" placeholder='Descrição' name="description" isFilter/>
-                </S.Filter>
-                <S.Filter>
-                    <Input label="Categoria" type="text" placeholder='Categoria' name="category" isFilter/>
-                </S.Filter>
-            </S.Filters>
-            <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="list accounts">
-                    <TableHead>
-                        <TableRow>
-                            {titles.map((title) => (
-                                <TableCell>{title}</TableCell>
-                            ))}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row) => (
-                            <TableRow
-                                key={row.title}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell component="th" scope="row">
-                                    {row.title}
-                                </TableCell>
-                                <TableCell align="right">{row.description}</TableCell>
-                                <TableCell align="right">{row.category}</TableCell>
-                                <TableCell align="right">{row.value}</TableCell>
-                                <TableCell align="right">{row.date}</TableCell>
-                                <TableCell align="right">
-                                    <S.IconDelete size={20} onClick={() => console.log('delete')} />
-                                </TableCell>
+            <S.FiltersAndDataTable>
+                <S.Filters>
+                    <Input label="Data Inicial" type="date" name="initialDate" isFilter />
+                    <S.Filter>
+                        <Input label="Data Final" type="date" name="finalDate" isFilter />
+                    </S.Filter>
+                    <S.Filter>
+                        <Input label="Título" type="text" placeholder='Título' name="title" isFilter />
+                    </S.Filter>
+                    <S.Filter>
+                        <Input label="Descrição" type="text" placeholder='Descrição' name="description" isFilter />
+                    </S.Filter>
+                    <S.Filter>
+                        <Input label="Categoria" type="text" placeholder='Categoria' name="category" isFilter />
+                    </S.Filter>
+                </S.Filters>
+                <TableContainer component={Paper} sx={{ mt:2 }}>
+                    <Table sx={{ minWidth: 650, fontSize: 60 }} aria-label="list accounts">
+                        <TableHead>
+                            <TableRow>
+                                {titles.map((title) => (
+                                    <TableCell sx={{ fontSize: 15, fontWeight: 'bold' }}>{title}</TableCell>
+                                ))}
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                        </TableHead>
+                        <TableBody>
+                            {rows.map((row) => (
+                                <TableRow
+                                    key={row.title}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <TableCell component="th" scope="row" sx={{ fontSize: 15 }}>
+                                        {row.title}
+                                    </TableCell>
+                                    <TableCell align="left" sx={{ fontSize: 15 }}>{row.description}</TableCell>
+                                    <TableCell align="left" sx={{ fontSize: 15 }}>{row.category}</TableCell>
+                                    <TableCell align="left" sx={{ fontSize: 15 }}>{row.value}</TableCell>
+                                    <TableCell align="left" sx={{ fontSize: 15 }}>{row.date}</TableCell>
+                                    <TableCell align="left" sx={{ fontSize: 20 }}>
+                                        <S.IconDelete size={20} onClick={() => console.log('delete')} />
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </S.FiltersAndDataTable>
+
         </S.Wrapper>
     )
 }
