@@ -7,7 +7,7 @@ export type InputProps = {
     isFilter?: boolean
 } & InputHTMLAttributes<HTMLInputElement>
 
-export default function Input({name, label, placeholder, type, isFilter = false}: InputProps) {
+export default function Input({name, label, placeholder, type, isFilter}: InputProps) {
     return (
         <S.Wrapper>
             <S.Label htmlFor={name}>{label}</S.Label>

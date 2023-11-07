@@ -42,7 +42,7 @@ export const Input = styled.input<InputProps>`
         margin: 5px 0;
         
         ${isFilter && css`
-            padding: 12px 40px 12px 10px;
+            padding: 14px 40px 14px 10px;
         `}
     `}
 `
