@@ -11,7 +11,9 @@ import Input from '../Input'
 import Button from '../Button'
 import { Bold } from 'styled-icons/boxicons-regular'
 
-
+export type ListCategoriesProps = {
+    openModal: (value: boolean) => void
+}
 
 function createData(
     title: string,
@@ -26,11 +28,11 @@ const rows = [
     createData('Frozen yoghurt', 'Description'),
 ]
 
-export default function ListCategories() {
+export default function ListCategories({openModal}: ListCategoriesProps) {
     return (
         <S.Wrapper>
             <S.Button>
-                <Button isFilter>
+                <Button isFilter onClick={() => openModal(true)}>
                     Adicionar
                 </Button>
             </S.Button>
