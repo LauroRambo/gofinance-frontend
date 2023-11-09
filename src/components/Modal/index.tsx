@@ -4,23 +4,22 @@ import * as S from './styles'
 
 export type ModalProps = {
     title: string
-    children: string
+    children?: React.ReactNode
     isOpen: boolean
     getValueOpen: (value: boolean) => void
 }
 
 export default function Modal({ title, children, isOpen, getValueOpen }: ModalProps) {
-    const [isModalOpen, setModalOpen] = useState<boolean>(isOpen)
+    console.log('modal', isOpen)
     return (
         <>
-            {isModalOpen && (
+            {isOpen && (
                 <S.Wrapper>
                     <S.Header>
                         <S.Title>{title}</S.Title>
                     </S.Header>
                     <S.Content>
-                        <S.IconDolar size={40} />
-                        <S.Count>{count}</S.Count>
+                        {children}
                     </S.Content>
                 </S.Wrapper>
             )}
