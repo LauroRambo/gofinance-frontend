@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
+    margin-top: 10px;
 `
 
 export const Inputs = styled.div`
@@ -8,7 +9,6 @@ export const Inputs = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
     grid-row-gap: 10px;
     justify-content: center;
-    padding: 0 10px;
     
 `
 

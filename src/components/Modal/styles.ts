@@ -5,8 +5,8 @@ import { RiMoneyDollarCircleLine } from 'react-icons/ri'
 export const Wrapper = styled.div.attrs({
     'data-testid': 'WrapperCard'
 })`
-    height: 120px;
-    width: 300px;
+    height: 50vh;
+    width: 60vw;
 
     ${ ({ theme }) => css`
         background: ${theme.colors.white};    
@@ -21,10 +21,12 @@ export const Wrapper = styled.div.attrs({
     margin-top: 10px;
     
     border-radius: 7px;
+
+    position: relative;
 `
 
 export const Header = styled.div`
-
+    margin-top: 10px;
 `
 
 export const Title = styled.h3`
@@ -37,7 +39,7 @@ export const Title = styled.h3`
 export const Content = styled.div`
     display: flex;
     flex-direction: row;
-    margin-top: 5px;
+    margin-top: 15px;
 `
 
 export const IconDolar = styled(RiMoneyDollarCircleLine)`

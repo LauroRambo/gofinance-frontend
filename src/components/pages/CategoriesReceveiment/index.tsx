@@ -10,10 +10,14 @@ const CategoriesReceveiment = () => {
     setModalIsOpen(true)
   }
   return (
-    <S.Wrapper>
-      <CategoriesReceveimentAdd getValueOpen={openAddModal} isOpen={modalIsOpen}/>
-      <ListCategories openModal={openAddModal}/>
-    </S.Wrapper>
+    <>
+      <S.Wrapper>
+        <ListCategories openModal={openAddModal} />
+        <S.ModalArea>
+          <CategoriesReceveimentAdd getValueOpen={openAddModal} isOpen={modalIsOpen} />
+        </S.ModalArea>
+      </S.Wrapper>
+    </>
   )
 }
 
