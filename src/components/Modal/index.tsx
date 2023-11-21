@@ -10,13 +10,16 @@ export type ModalProps = {
 }
 
 export default function Modal({ title, children, isOpen, getValueOpen }: ModalProps) {
-    console.log('modal', isOpen)
+    const [isModalOpen, setIsModalOpen] = useState(isOpen)
     return (
         <>
-            {isOpen && (
+            {isModalOpen && (
                 <S.Wrapper>
                     <S.Header>
                         <S.Title>{title}</S.Title>
+                        <S.CloseIcon onClick={() => {
+                            setIsModalOpen(!isModalOpen)
+                        }} />
                     </S.Header>
                     <S.Content>
                         {children}
